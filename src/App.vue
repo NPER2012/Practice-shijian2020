@@ -30,6 +30,7 @@ $text-color-highlight: #42b983; //高亮文字颜色
     text-decoration: none; //链接下划线取消
       color: $text-color-highlight;
   }
+  
 }
 
 #nav { //导航栏
