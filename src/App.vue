@@ -28,7 +28,7 @@ $text-color-highlight: #42b983; //高亮文字颜色
 
   a {
     text-decoration: none; //链接下划线取消
-    color: $text-color-base;
+      color: $text-color-highlight;
   }
 }
 
@@ -39,7 +39,7 @@ $text-color-highlight: #42b983; //高亮文字颜色
     font-weight: bold;
 
     &.router-link-exact-active {
-      color: $text-color-highlight;
+    color: $text-color-base;
     }
   }
 }

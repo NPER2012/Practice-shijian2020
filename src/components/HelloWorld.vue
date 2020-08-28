@@ -2,8 +2,8 @@
   <div id="hello">
     <h1>{{ msg }}</h1>
     <p>
-      众所周知，暑期实践2020是一个由于某些部长不给力而炸了好几次的锅，<br>
-      而这里正是某部长为了补锅与练习技术而制作的页面——的首页，<br>
+      众所周知，暑期实践2020是一个由于某新部长不给力而炸了好几次的锅，<br>
+      而这里正是该部长为了补锅与练习技术而制作的页面——的欢迎页，<br>
       工作进度可<a href="https://github.com/NPER2012/Practice-shijian2020" target="_blank" rel="noopener">在github上查看</a>,欢迎小伙伴们督工
     </p>
     <h3>内部页面快速跳转</h3>
@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 #hello {
   h3 {
@@ -52,9 +52,6 @@ export default {
   li {
     display: inline-block;
     margin: 0 10px;
-  }
-  a {
-    color: #42b983;
   }
 }
 </style>
