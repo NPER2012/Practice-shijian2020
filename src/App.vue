@@ -1,38 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
+    <div id="nav"> <!--导航栏-->
+      <router-link to="/">Welcome</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view/> <!--内容显示区域-->
   </div>
 </template>
 
 <style lang="scss">
 
-$text-color-highlight: #42b983;
-$text-color-base: #2c3e50;
+$text-color-base: #2c3e50; //基础文字颜色
+$text-color-highlight: #42b983; //高亮文字颜色
 
-*{padding: 0; margin: 0;}
+*{padding: 0; margin: 0;} //全局边界调零
 
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif; //字体（默认）
 
   /*字体抗锯齿渲染 */
-  -webkit-font-smoothing: antialiased;/*chrome、safari*/
-  -moz-osx-font-smoothing: grayscale;/*firefox*/
+  -webkit-font-smoothing: antialiased; //chrome、safari
+  -moz-osx-font-smoothing: grayscale; //firefox
   
   text-align: center;
   color: $text-color-base;
 
   a {
-    text-decoration: none;
+    text-decoration: none; //链接下划线取消
     color: $text-color-base;
   }
 }
 
-#nav {
+#nav { //导航栏
   padding: 30px;
 
   a{
