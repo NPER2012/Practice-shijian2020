@@ -16,3 +16,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.Welcome{
+  margin-top: 30px;
+}
+</style>

@@ -20,15 +20,18 @@
     <p>所以hr标签除了用flex布局以外还有什么方法能居中对齐啊</p>
   </div>
 </template>
+
 <style lang="scss" scoped>
 .about
 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top:30px;
 }
 hr {
-  width: 800px;
+  max-width: 100vw;
+  width: 600px;
   margin: 20px;
 }
 p{
