@@ -26,6 +26,13 @@ Vue.use(VueRouter)
     component: function () {
       return import('../views/Home.vue')
     }
+  },
+  {
+    path: '/vues',
+    name: 'VueS',
+    component: function () {
+      return import('../views/VueS.vue')
+    }
   }
 ]
 

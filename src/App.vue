@@ -3,17 +3,33 @@
     <div id="nav"> <!--导航栏-->
       <router-link to="/home">Home</router-link> |
       <router-link to="/">Welcome</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/vues">VueS</router-link>
+      <ShowTime style="color: #d9f9f4; position: absolute; right: 1rem; top: 1.2rem;"/>
     </div>
     <router-view/> <!--内容显示区域-->
   </div>
 </template>
 
+<script>
+import ShowTime from '@/components/ShowTime.vue'
+
+export default {
+  data: function () {
+    return {
+    }
+  },
+  components: {
+    ShowTime
+  }
+}
+</script>
+
 <style lang="scss">
 
 $text-color-base: #2c3e50; //基础文字颜色
 $text-color-highlight: #42b983; //高亮文字颜色
-$background-color-light: #ffffff; //高亮文字颜色
+$background-color-light: #d9f9f4; //高亮背景颜色
 
 *{padding: 0; margin: 0;} //全局边界调零
 
@@ -29,6 +45,8 @@ $background-color-light: #ffffff; //高亮文字颜色
   
   text-align: center;
   color: $text-color-base;
+  background-color: $background-color-light;
+  min-height: 100vh;
 
   a {
     text-decoration: none; //链接下划线取消
@@ -55,5 +73,5 @@ $background-color-light: #ffffff; //高亮文字颜色
   }
 }
 
-
 </style>
+

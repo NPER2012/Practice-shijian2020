@@ -4,7 +4,7 @@
     <hr>
     <h3>相关插件文档：</h3>
     <ul>
-      <li><a href="https://cli.vuejs.org/zh/" target="_blank" rel="noopener">Vue CLI</a></li>
+      <li><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener">Vue.js</a></li>
       <li><a href="https://router.vuejs.org/zh/" target="_blank" rel="noopener">Vue Router</a></li>
       <li><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">Vuex</a></li>
       <li><a href="https://www.sass.hk/docs/" target="_blank" rel="noopener">scss</a></li>  
