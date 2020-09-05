@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:30px;
+  padding: 30px 0;
 }
 hr {
   max-width: 100vw;

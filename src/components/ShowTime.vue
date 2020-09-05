@@ -44,5 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.ShowTime{
+  user-select: none;
+}
 </style>
