@@ -21,11 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-
-$dark: #2c3e50; //基础文字颜色
-$highlight: #42b983; //高亮文字颜色
-$light: #d9f9f4; //高亮背景颜色
-
+@import '@/scss/color';
 *{padding: 0; margin: 0;} //全局边界调零
 
 ::-webkit-scrollbar {display: none;} //消除滚动条

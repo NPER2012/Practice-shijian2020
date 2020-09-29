@@ -43,14 +43,14 @@ export default {
 
 <style lang="scss" scoped>
 
-$dark: #2c3e50; //基础文字颜色
-$highlight: #42b983; //高亮文字颜色
-$light: #d9f9f4; //高亮背景颜色
+@import '@/scss/color';
 
 #Nav{ //导航栏
   padding: 20px;
   background-color: $dark;
   color: $highlight;
+  position: sticky;
+  top: 0px;
 
   ul{
     list-style-type:none;

@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/scss/color';
 .VueS
 {
   display: flex;
@@ -37,9 +38,9 @@ export default {
   padding: 15px;
   width: 400px;
   height: 500px;
-  background-color: #2c3e50;
-  border: 5px solid #42b983;
-  color: #d9f9f4;
+  background-color: $dark;
+  border: 5px solid $highlight;
+  color: $light;
   border-radius: 25px;
   
 }
