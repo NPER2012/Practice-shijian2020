@@ -7,8 +7,16 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'Welcome',
+    name: 'index',
+    redirect: '/welcome',
     component: Welcome
+  },
+  {
+    path: '/welcome',
+    name: 'Welcome',
+    component: function () {
+      return import('../views/Welcome.vue')
+    }
   },
   {
     path: '/about',
@@ -32,6 +40,20 @@ Vue.use(VueRouter)
     name: 'VueS',
     component: function () {
       return import('../views/VueS.vue')
+    }
+  },
+  {
+    path: '/work',
+    name: 'Work',
+    component: function () {
+      return import('../views/Homeworks/PreviewHomework.vue')
+    }
+  },
+  {
+    path: '/work/X',
+    name: 'Work',
+    component: function () {
+      return import('../views/Homeworks/PreviewHomeworkX.vue')
     }
   }
 ]

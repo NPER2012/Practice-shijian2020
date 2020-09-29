@@ -17,12 +17,16 @@ export default {
     return {
       tab:[
         {
+          title: 'Work',
+          path: '/work'
+        },
+        {
           title: 'Home',
           path: '/home'
         },
         {
           title: 'Welcome',
-          path: '/'
+          path: '/welcome'
         },
         {
           title: 'About',
@@ -46,11 +50,15 @@ export default {
 @import '@/scss/color';
 
 #Nav{ //导航栏
-  padding: 20px;
+  padding: {
+    top: 18px;
+    bottom: 18px - 4.4px;
+  };
   background-color: $dark;
   color: $highlight;
   position: sticky;
   top: 0px;
+  height: 18.4px;
 
   ul{
     list-style-type:none;
@@ -70,7 +78,12 @@ export default {
           border: 1.5px solid $light;
         }
 
-        &.router-link-exact-active {
+        &:active{
+          border: 1.5px solid $light;
+          color: $light;
+        }
+
+        &.router-link-active {
           color: $dark;
           background-color: $light;
           border: 1.5px solid rgba(200,200,200,0);
