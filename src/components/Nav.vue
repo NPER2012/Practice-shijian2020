@@ -71,14 +71,10 @@ export default {
         font-weight: bold;
         padding: 0.2rem 0.6rem;
         margin: 0 0.9rem;
-        border-radius: 0.7rem;
-        border: 1.5px solid rgba(200,200,200,0);
+        border-radius: 20px;
+        border: 1.5px solid $thansparent;
 
         &:hover{
-          border: 1.5px solid $light;
-        }
-
-        &:active{
           border: 1.5px solid $light;
           color: $light;
         }
@@ -86,8 +82,13 @@ export default {
         &.router-link-active {
           color: $dark;
           background-color: $light;
-          border: 1.5px solid rgba(200,200,200,0);
+          border: 1.5px solid $thansparent;
         }
+
+        &:active{
+          color: $highlight;
+        }
+
       }
     }
   }
