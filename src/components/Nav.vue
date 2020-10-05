@@ -1,8 +1,15 @@
 <template>
 <div id="Nav"> <!--导航栏-->
   <ul>
-    <li v-for="value in tab">
-      <router-link :to="value.path">{{value.title}}</router-link>
+    <li v-for="value in tab" class="navTab">
+      <div class="navBlock">
+        <router-link :to="value.path" class="first">{{value.title}}</router-link>
+        <ul v-if="value.expand">
+          <li v-for="value2 in value.expand">
+            <router-link :to="value2.path">{{value2.title}}</router-link>
+          </li>
+        </ul>
+      </div>
     </li>
   </ul>
   <ShowTime style="color: #d9f9f4; position: absolute; right: 1rem; top: 1.2rem;"/>
@@ -18,7 +25,17 @@ export default {
       tab:[
         {
           title: 'Work',
-          path: '/work'
+          path: '/work',/*
+          expand: [
+            {
+              title: 'first',
+              path: '/work'
+            },
+            {
+              title: 'firstX',
+              path: '/workX'
+            }
+          ]*/
         },
         {
           title: 'Home',
@@ -60,19 +77,23 @@ export default {
   top: 0px;
   height: 18.4px;
 
-  ul{
-    list-style-type:none;
-    li {
+  > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    .navTab {
       display: inline-block;
+      height: 1rem;
       &:not(:last-child){
         border-right: 1.5px solid ;
       }
-      a {
+      .first {
         font-weight: bold;
         padding: 0.2rem 0.6rem;
         margin: 0 0.9rem;
         border-radius: 20px;
         border: 1.5px solid $thansparent;
+        transition: border 0.4s;
 
         &:hover{
           border: 1.5px solid $light;
