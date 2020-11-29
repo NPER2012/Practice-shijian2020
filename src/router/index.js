@@ -43,6 +43,13 @@ Vue.use(VueRouter)
     }
   },
   {
+    path: '/element',
+    name: 'Element',
+    component: function () {
+      return import('../views/Element.vue')
+    }
+  },
+  {
     path: '/work',
     name: 'Work',
     component: function () {

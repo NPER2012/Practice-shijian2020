@@ -38,8 +38,8 @@ export default {
           ]*/
         },
         {
-          title: 'Home',
-          path: '/home'
+          title: 'Element',
+          path: '/element'
         },
         {
           title: 'Welcome',
