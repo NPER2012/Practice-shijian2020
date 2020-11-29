@@ -3,8 +3,8 @@
   <ul>
     <li v-for="value in tab" class="navTab">
       <div class="navBlock">
-        <router-link :to="value.path" class="first">{{value.title}}</router-link>
-        <ul v-if="value.expand">
+        <router-link :to="value.path" class="title">{{value.title}}</router-link>
+        <ul v-if="value.expand" class="downBlock">
           <li v-for="value2 in value.expand">
             <router-link :to="value2.path">{{value2.title}}</router-link>
           </li>
@@ -25,17 +25,17 @@ export default {
       tab:[
         {
           title: 'Work',
-          path: '/work',/*
+          path: '/work',
           expand: [
             {
               title: 'first',
-              path: '/work'
+              path: '/work/first'
             },
             {
               title: 'firstX',
-              path: '/workX'
+              path: '/work/firstX'
             }
-          ]*/
+          ]
         },
         {
           title: 'Element',
@@ -76,6 +76,7 @@ export default {
   position: sticky;
   top: 0px;
   height: 18.4px;
+  z-index: 2005;
 
   > ul{
     list-style-type: none;
@@ -87,7 +88,8 @@ export default {
       &:not(:last-child){
         border-right: 1.5px solid ;
       }
-      .first {
+
+      .title {
         font-weight: bold;
         padding: 0.2rem 0.6rem;
         margin: 0 0.9rem;
@@ -109,7 +111,41 @@ export default {
         &:active{
           color: $highlight;
         }
+      }
 
+      .downBlock{
+        list-style-type: none;
+        margin-top: 1.5rem;
+        display: none;
+        li{
+          margin: 1rem;
+          a{
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            border: 1.5px solid $thansparent;
+            transition: border 0.4s;
+            background-color: $dark;
+
+            &:hover{
+              border: 1.5px solid $light;
+              color: $light;
+            }
+
+            &.router-link-active {
+              color: $dark;
+              background-color: $light;
+              border: 1.5px solid $thansparent;
+            }
+
+            &:active{
+              color: $highlight;
+            }
+          }
+
+        }
+      }
+      .navBlock:hover > .downBlock{
+        display: block;
       }
     }
   }

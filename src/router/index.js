@@ -53,12 +53,19 @@ Vue.use(VueRouter)
     path: '/work',
     name: 'Work',
     component: function () {
+      return import('../views/Homework.vue')
+    }
+  },
+  {
+    path: '/work/first',
+    name: 'Work',
+    component: function () {
       return import('../views/Homeworks/PreviewHomework.vue')
     }
   },
   {
-    path: '/work/X',
-    name: 'Work',
+    path: '/work/firstX',
+    name: 'WorkX',
     component: function () {
       return import('../views/Homeworks/PreviewHomeworkX.vue')
     }
